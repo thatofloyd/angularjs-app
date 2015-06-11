@@ -1,0 +1,89 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/login">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+<div>
+    <div class="row">
+        <div class="col-lg-4">
+            <ul id="sidebar" class="nav nav-pills nav-stacked" style="max-width: 200px;">
+                <li><a href="#/home"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                <li class="active"><a href="#/request"><span class="glyphicon glyphicon-book"></span> Request Book</a></li>
+                <li><a href="#/requested"><span class="glyphicon glyphicon-alert"></span>  Requested Books</a></li>
+                <li><a href="#/awaiting"><span class="glyphicon glyphicon-hourglass"></span>  Pending Requests</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-8">
+     <!--       <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>-->
+            <div class="form-group">
+                <label for="InputTitle">Enter Title</label>
+                <div class="input-group">
+                    <input type="text" ng-model="model.title" class="form-control" name="InputTitle" id="InputTitle" placeholder="Enter Title"  required>
+                 <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputAuthor">Enter Author</label>
+                <div class="input-group">
+                    <input type="text" ng-model="model.author" class="form-control" id="InputAuthor" name="Author" placeholder="Enter Author" required>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk" ></span></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputISBN">ISBN</label>
+                <div class="input-group">
+                    <input type="text" ng-model="model.isbn" class="form-control" id="InputISBN" name="InputISBN" placeholder="Enter ISBN" required>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk" ></span></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputPublisher">Enter Publisher</label>
+                <div class="input-group">
+                    <input type="text" ng-model="model.publisher" name="Publisher" id="InputPublisher" class="form-control"  placeholder="Enter Publisher" required/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk" ></span></span>
+                </div>
+            </div>
+            <button ng-click="model.addBook()" class="btn btn-info pull-left">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-8">
+            <table class="table">
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>ISBN</td>
+                    <td>Publisher</td>
+                </tr>
+                <tr ng-repeat="(key,value) in model.books">
+                    <td>{{value.Title}}</td>
+                    <td>{{value.Author}}</td>
+                    <td>{{value.ISBN}}</td>
+                    <td>{{value.Publisher}}</td>
+                    <td>
+                        <button ng-click="model.removeBook($index)" class="btn btn-danger">Remove</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8">
+            <form role="form" ng-submit="model.requestBooks()">
+                <div>
+                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-success pull-left">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>

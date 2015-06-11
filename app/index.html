@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularjs.instabook.client.web">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>::InstaBook::</title>
+  <link href="asserts/css/bootstrap.min.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div ng-view=""></div>
+</div>
+
+<script src="asserts/js//jquery.min.js"></script>
+<script src="asserts/js/bootstrap.min.js"></script>
+<script src="asserts/js/angular.min.js"></script>
+<script src="asserts/js/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="common/service/AuthenticationService.js"></script>
+<script src="common/service/UserService.js"></script>
+<script src="common/service/HelperService.js"></script>
+<script src="user/home/HomeController.js"></script>
+<script src="user/login/LoginController.js"></script>
+<script src="user/register/RegisterController.js"></script>
+<script src="user/request/RequestController.js"></script>
+<script src="user/requested/RequestedController.js"></script>
+<script src="user/awaiting/AwaitingController.js"></script>
+</body>
+</html>

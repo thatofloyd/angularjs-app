@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/login">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+<div>
+    <div class="row">
+        <div class="col-lg-4">
+            <ul id="sidebar" class="nav nav-pills nav-stacked" style="max-width: 200px;">
+                <li><a href="#/home"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                <li><a href="#/request"><span class="glyphicon glyphicon-book"></span> Request Book</a></li>
+                <li class="active"><a href="#/requested"><span class="glyphicon glyphicon-alert"></span>  Requested Books</a></li>
+                <li><a href="#/awaiting"><span class="glyphicon glyphicon-hourglass"></span>  Pending Requests</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-8">
+            <table class="table">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Publisher</th>
+                </tr>
+                <tr ng-repeat="(key,value) in model.books">
+                    <td>{{value.Title}}</td>
+                    <td>{{value.Author}}</td>
+                    <td>{{value.ISBN}}</td>
+                    <td>{{value.Publisher}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>

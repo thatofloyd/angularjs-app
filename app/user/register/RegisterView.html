@@ -1,0 +1,40 @@
+<div class="jumbotron">
+<div>
+    <div class="row">
+        <form role="form" ng-submit="model.registerUser()">
+            <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                    <label for="InputName">Enter Name</label>
+                    <div class="input-group">
+                        <input type="text" ng-model="model.name" class="form-control" name="InputName" id="InputName" placeholder="Enter Name"  required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputSurname">Enter Surname</label>
+                    <div class="input-group">
+                        <input type="text" ng-model="model.surname" class="form-control" id="InputSurname" name="Surname" placeholder="Surname" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk" ></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Enter Email</label>
+                    <div class="input-group">
+                        <input type="email" ng-model="model.email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk" ></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword">Enter Password</label>
+                    <div class="input-group">
+                        <input type="password" ng-model="model.password" name="Password" id="InputPassword" class="form-control"  required/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+            </div>
+        </form>
+    </div>
+</div>
+</div>
